@@ -48,7 +48,7 @@ async def run(file, data, channels, sample_width, sample_rate):
     async with websockets.connect(
         
         # Testing against local on prem instance
-        #f'ws://localhost:8080/v1/listen?channels={channels}&sample_rate={sample_rate}&encoding={ENCODING}&multichannel={MULTICHANNEL}&interim_results={INTERIM_RESULTS}&model={MODEL}&tier={TIER}&endpointing={ENDPOINTING}'
+        #f'ws://localhost:8080/v1/listen?channels={channels}&sample_rate={sample_rate}&encoding={ENCODING}&multichannel={MULTICHANNEL}&interim_results={INTERIM_RESULTS}&model={MODEL}&endpointing={ENDPOINTING}'
         
         # Testing against hosted Deepgram
         f'wss://api.deepgram.com/v1/listen?channels={channels}&sample_rate={sample_rate}&encoding={ENCODING}&multichannel={MULTICHANNEL}&interim_results={INTERIM_RESULTS}&model={MODEL}&endpointing={ENDPOINTING}',
